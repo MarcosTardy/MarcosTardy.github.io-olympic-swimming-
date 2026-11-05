@@ -1,26 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#">
-  <owl:Ontology rdf:about="https://marcostardy.github.io/olympic-swimming/ontology/swimming"/>
-</rdf:RDF>
-
-<?xml version="1.0" encoding="UTF-8"?>
-
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:sport="https://sportschema.org/ontologies/main/"
-    xmlns:ex="https://MarcosTardy.github.io/olympic-swimming/">
+    xmlns:ex="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming">
+    <owl:Ontology rdf:about="https://marcostardy.github.io/olympic-swimming/ontology/swimming"/>
 
     <!-- 1. Atleta -->
     <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/athlete/ryosuke-irie">
         <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Athlete"/>
         <foaf:name>Ryosuke Irie</foaf:name>
-        <sport:memberOf rdf:resource="https://MarcosTardy.github.io/olympic-swimming/team/japan"/>
-        <foaf:gender>Male</foaf:gender>
+        <sport:membershipOf rdf:resource="https://MarcosTardy.github.io/olympic-swimming/team/japan"/>
+        <foaf:gender>male</foaf:gender>
     </rdf:Description>
 
     <!-- 2. País / equipo -->
@@ -70,55 +62,55 @@
 
     <!-- 7. Definición de términos propios mediante RDFS -->
 
-    <rdfs:Class rdf:about="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent">
+    <rdfs:Class rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent">
         <rdfs:label>Swimming Event</rdfs:label>
         <rdfs:comment>Prueba específica de natación.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://sportschema.org/ontologies/main/Event"/>
     </rdfs:Class>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/distance">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#distance">
         <rdfs:label>distance</rdfs:label>
-        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/distanceUnit">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#distanceUnit">
         <rdfs:label>distance unit</rdfs:label>
-        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/stroke">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#stroke">
         <rdfs:label>stroke</rdfs:label>
-        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/genderCategory">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#genderCategory">
         <rdfs:label>gender category</rdfs:label>
-        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/isRelay">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#isRelay">
         <rdfs:label>is relay</rdfs:label>
-        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:domain rdf:resource="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#SwimmingEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/timeSeconds">
-        <rdfs:label>time in seconds</rdfs:label>
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#timeSeconds">
+        <rdfs:label>timeSeconds</rdfs:label>
         <rdfs:domain rdf:resource="https://sportschema.org/ontologies/main/IndividualParticipation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/year">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#year">
         <rdfs:label>competition year</rdfs:label>
         <rdfs:domain rdf:resource="https://sportschema.org/ontologies/main/Competition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/hostCity">
+    <rdf:Property rdf:about="https://MarcosTardy.github.io/olympic-swimming/ontology/swimming#hostCity">
         <rdfs:label>host city</rdfs:label>
         <rdfs:domain rdf:resource="https://sportschema.org/ontologies/main/Competition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
