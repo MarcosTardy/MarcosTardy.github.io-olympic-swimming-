@@ -1,24 +1,151 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sitio personal de Marcos Tardy.">
-  <title>Marcos Tardy</title>
-  <style>
-    :root { color-scheme: light; font-family: system-ui, sans-serif; }
-    body { display: grid; min-height: 100vh; margin: 0; place-items: center; background: #f6f8fa; color: #24292f; }
-    main { max-width: 38rem; padding: 2rem; text-align: center; }
-    h1 { margin-bottom: .5rem; font-size: clamp(2rem, 8vw, 3.5rem); }
-    p { color: #57606a; font-size: 1.125rem; line-height: 1.6; }
-    a { color: #0969da; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Olympic Swimming - RDF Dataset</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #263238;
+            background-color: #f5f8fa;
+        }
+
+        header {
+            background-color: #123b5d;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #087eaa;
+        }
+
+        .button {
+            display: inline-block;
+            background: #087eaa;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #607d8b;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-  <main>
-    <h1>Hola, soy Marcos.</h1>
-    <p>Este es mi sitio personal, publicado con GitHub Pages.</p>
-    <p><a href="https://github.com/MarcosTardy">Mi perfil de GitHub</a></p>
-  </main>
+
+    <header>
+        <h1>Olympic Swimming</h1>
+        <p>RDF Dataset and Ontology for Olympic Swimming Results</p>
+    </header>
+
+    <section>
+        <h2>About the project</h2>
+
+        <p>
+            This project represents Olympic swimming competition data
+            using RDF and Linked Data principles.
+            It focuses on Japanese swimmers participating in the
+            Tokyo 2020 Olympic Games.
+        </p>
+
+        <p>
+            The dataset describes athletes, swimming events,
+            competitions and individual participation results.
+        </p>
+    </section>
+
+    <section>
+        <h2>Ontology</h2>
+
+        <p>
+            The project uses existing vocabularies such as
+            FOAF and IPTC Sport Schema, together with
+            custom classes and properties defined using RDF Schema.
+        </p>
+
+        <p>
+            <strong>Ontology namespace:</strong><br>
+            <code>
+                https://marcostardy.github.io/olympic-swimming/ontology/swimming#
+            </code>
+        </p>
+
+        <a class="button" href="ontology/swimming.rdf">
+            View RDF/XML Ontology
+        </a>
+    </section>
+
+    <section>
+        <h2>Data and resources</h2>
+
+        <p>
+            The RDF dataset contains information about:
+        </p>
+
+        <ul>
+            <li>Ryosuke Irie</li>
+            <li>Tomoru Honda</li>
+            <li>Japan national team</li>
+            <li>Tokyo 2020 Olympic Games</li>
+            <li>200m Backstroke Men</li>
+            <li>200m Butterfly Men</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>External vocabularies</h2>
+
+        <ul>
+            <li>
+                <a href="https://sportschema.org/">
+                    IPTC Sport Schema
+                </a>
+            </li>
+            <li>
+                <a href="http://xmlns.com/foaf/spec/">
+                    FOAF Vocabulary
+                </a>
+            </li>
+            <li>
+                <a href="https://www.dbpedia.org/">
+                    DBpedia
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Olympic Swimming RDF Project | 2026</p>
+    </footer>
+
 </body>
 </html>
+
