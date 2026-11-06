@@ -1,5 +1,6 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -11,7 +12,12 @@
     <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/athlete/ryosuke-irie">
         <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Athlete"/>
         <foaf:name>Ryosuke Irie</foaf:name>
-        <sport:membershipOf rdf:resource="https://MarcosTardy.github.io/olympic-swimming/team/japan"/>
+        <foaf:gender>male</foaf:gender>
+    </rdf:Description>
+    <!-- 1b. Atleta -->
+    <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/athlete/tomoru-honda">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Athlete"/>
+        <foaf:name>Tomoru Honda</foaf:name>
         <foaf:gender>male</foaf:gender>
     </rdf:Description>
 
@@ -42,6 +48,18 @@
         <ex:isRelay rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isRelay>
         <sport:eventInCompetition rdf:resource="https://MarcosTardy.github.io/olympic-swimming/competition/tokyo-2020"/>
     </rdf:Description>
+    
+    <!-- 4b. Prueba: 200 metros mariposa masculino -->
+    <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/event/200m-butterfly-men">
+        <rdf:type rdf:resource="https://MarcosTardy.github.io/olympic-swimming/SwimmingEvent"/>
+        <rdfs:label>200m Butterfly Men</rdfs:label>
+        <ex:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</ex:distance>
+        <ex:distanceUnit>m</ex:distanceUnit>
+        <ex:stroke>Butterfly</ex:stroke>
+        <ex:genderCategory>Men</ex:genderCategory>
+        <ex:isRelay rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isRelay>
+        <sport:eventInCompetition rdf:resource="https://MarcosTardy.github.io/olympic-swimming/competition/tokyo-2020"/>
+    </rdf:Description>
 
     <!-- 5. Participación individual de Ryosuke Irie -->
     <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/participation/ryosuke-irie-tokyo-2020">
@@ -53,11 +71,21 @@
         <ex:timeSeconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">117.32</ex:timeSeconds>
     </rdf:Description>
 
+    <!-- 5b.Participacion individual de Tomoru Honda -->
+    <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/participation/tomoru-honda-tokyo-2020">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/IndividualParticipation"/>
+        <sport:participationBy rdf:resource="https://MarcosTardy.github.io/olympic-swimming/athlete/tomoru-honda"/>
+        <sport:participationIn rdf:resource="https://MarcosTardy.github.io/olympic-swimming/event/200m-butterfly-men"/>
+        <sport:teamParticipation rdf:resource="https://MarcosTardy.github.io/olympic-swimming/participation/japan-tokyo-2020"/>
+        <sport:rank>2</sport:rank>
+        <ex:timeSeconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">113.73</ex:timeSeconds>
+    </rdf:Description>
+
     <!-- 6. Participación del equipo japones -->
     <rdf:Description rdf:about="https://MarcosTardy.github.io/olympic-swimming/participation/japan-tokyo-2020">
         <rdf:type rdf:resource="https://sportschema.org/ontologies/main/TeamParticipation"/>
         <sport:participationBy rdf:resource="https://MarcosTardy.github.io/olympic-swimming/team/japan"/>
-        <sport:participationIn rdf:resource="https://MarcosTardy.github.io/olympic-swimming/event/200m-backstroke-men"/>
+        <sport:participationIn rdf:resource="https://MarcosTardy.github.io/olympic-swimming/competition/tokyo-2020"/>
     </rdf:Description>
 
     <!-- 7. Definición de términos propios mediante RDFS -->
@@ -117,3 +145,4 @@
     </rdf:Property>
 
 </rdf:RDF>
+
